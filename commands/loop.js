@@ -5,6 +5,7 @@ module.exports.run = (client, message, args, queue, searcher) => {
     if(message.member.voice.channel != message.guild.me.voice.channel)
         return message.channel.send("You are not in the voice channel!")
 
+    if(args.length < 1) return
     switch(args[0].toLowerCase()){
         case 'all':
             serverQueue.loopall = !serverQueue.loopall;
