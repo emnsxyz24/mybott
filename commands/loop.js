@@ -6,6 +6,7 @@ module.exports.run = (client, message, args, queue, searcher) => {
         return message.channel.send("You are not in the voice channel!")
 
     if(args.length < 1) return
+    console.log(args[0]);
     switch(args[0].toLowerCase()){
         case 'all':
             serverQueue.loopall = !serverQueue.loopall;
