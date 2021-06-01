@@ -34,6 +34,7 @@ fs.readdir("./commands/", (e, f) => {
 const queue = new Map();
 
 client.on("ready", () => {
+    client.user.setActivity('136 Members', { type: 'WATCHING' })
     console.log("I am online!")
 })
 
